@@ -1,5 +1,5 @@
 # TTDMonitor
-
+![](https://github.com/deanOcoin/ttdmonitor/blob/main/ttdmonitor.png)
 ### What is TTD Client?
 * TTD Client is a program that uses [VanitySearch](https://github.com/JeanLucPons/VanitySearch) to scan ranges of bitcoin private keys for the Bitcoin Puzzle Challenge and report the scanned ranges to the [TTD collective pool](http://www.ttdsales.com/66bit/index.php).
 * TTD Client creates an instance of VanitySearch as a child process for each range that it needs to check.
