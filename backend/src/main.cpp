@@ -119,36 +119,7 @@ int main()
 			break;
 		}
 	}
-
-	/*
-	Client ttdclient = Client(process_name);
-
-	if (ttdclient.GetSubProcesses().size() == 0)
-	{
-		std::cout << "Could not find PID of process: " << process_name << std::endl;
-		std::cout << "Make sure the process is running." << std::endl;
-		return 0;
-	}
-	else if (ttdclient.GetSubProcesses().size() == 1 && ttdclient.GetSubProcesses().at(0) == 0)
-	{
-		std::cout << "0 Subprocesses found. Has range searching begun?" << std::endl;
-		return 0;
-	}
-
-	while (1)
-	{
-		double rate = ttdclient.vanitysearch_process->GetKeyRate();
-		double percent_complete = ttdclient.vanitysearch_process->GetPercentCompleted();
-		if (rate < 0 || percent_complete < 0)
-		{
-			ttdclient.UpdateSubProcesses();
-		}
-
-		std::cout << rate << " : " << percent_complete << std::endl;
-	}
-	*/
 	
-
 	closesocket(client_socket);
 	closesocket(listen_socket);
 	WSACleanup();
