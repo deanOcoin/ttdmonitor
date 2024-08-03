@@ -32,8 +32,9 @@ class Connection:
             try:
                 self.socket.sendall("?".encode("utf-8"))
                 data = self.socket.recv(1024).decode("utf-8") # standard, but no real need for 1024 bytes
-                print(data)
                 key_rate_s = data.split(":")[0]
+                if float(key_rate_s) > 10.0: # support MK/s not BK/s
+                    key_rate_s = str(float(key_rate_s) / 10**9)
                 percent_complete_s = data.split(":")[1]
                 globals.key_rate = float(key_rate_s)
                 globals.percent_complete = float(percent_complete_s)
